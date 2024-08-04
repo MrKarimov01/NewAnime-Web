@@ -1,0 +1,23 @@
+@media screen and (max-width: 996px){
+    .container{
+        background: url("./../img/cover.png"), url("./../img/wallpaper.jpg") no-repeat;
+        // background-color: white;
+        background-size: auto;
+        box-shadow: inset 70px -70px 100px rgba(0, 0, 0, 0.3);
+
+    }
+    .nav_li_items{
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 691px){
+    .container{
+        background: url("./../img/cover.png"), url("./../img/wallpaper.jpg") center no-repeat;
+        // background-color: white;
+        background-size: cover;
+        box-shadow: inset 70px -70px 100px rgba(0, 0, 0, 0.3);
+
+    }
+    
+}

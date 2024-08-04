@@ -1,0 +1,114 @@
+@import "./general.scss";
+@import "./varibals.scss";
+
+
+
+.container{
+
+    width: 100%;
+    height: 100vh;
+    background: url("./../img/cover.png"), url("./../img/wallpaper.jpg") center center no-repeat;
+    // background-color: white;
+    background-size: cover;
+    box-shadow: inset 70px -70px 100px rgba(0, 0, 0, 0.3);
+
+    
+    
+    header{
+        width: 100%;
+        // border: 4px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 calc(100vw - 91.5%);
+        padding-top: 40px;
+        nav{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .logo{
+                h3{
+                    // gap: 8px;
+                    text-transform: uppercase;
+                    
+                    color: $yellow;
+                    font-size: 20px;
+                    font-weight: 700;
+                    span{
+                        margin-right: 8px;
+                        color: $black7;
+                        background-color: $yellow;
+                        padding: 8px;
+                        border-radius: 4px;
+                    }
+                }
+            }
+            .selection{
+                display: flex;
+                align-items: center;
+                ul{
+                    gap: 64px;
+
+                    li{
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        padding-bottom: 14px;
+                        
+
+                        a{
+                            color: $white;
+                            text-decoration: none;
+                            font-size: 18px;
+                            line-height: 22px;
+                            font-weight: 400;
+                            &:hover ~ .line{
+                                width: 100%;
+                                left: 0;
+                            }
+                            &:active ~ .line{
+                                animation: qizil 1.5s linear forwards;
+                            }
+                            
+                            
+                        }
+                        .line{
+                            width: 0%;
+                            height: 2px;
+                            
+                            background-color: $white;
+                            border-radius: 2px;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            transition: all .3s;
+                        }
+                        .line_active{
+                            width: 100%;
+                        }
+                    }
+
+                }
+                .search_box{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    padding-left: 20px;
+                    border-left: 2px solid white;
+                    height: 21px;
+
+                    i{
+                        color: $white;
+                        font-size: 20px;
+                    }
+                }
+            }
+            
+        }
+    }
+
+
+
+}
+@import "./responsive.scss";
